@@ -1009,3 +1009,99 @@ header.sticky {
 #user-logged-in:hover .user-dropdown {
     display: block;
 }
+/* =========================
+   RESPONSIVE MOBILE & IPAD
+   ========================= */
+
+/* 📱 Điện thoại */
+@media (max-width: 768px) {
+
+    /* Header */
+    .top-nav {
+        padding: 0 15px;
+    }
+
+    .search-cart {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100% !important;
+    }
+
+    /* HERO */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-item {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    .card-item.active {
+        transform: none !important;
+    }
+
+    /* SẢN PHẨM */
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* FOOTER */
+    .footer-section {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .product-links-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 📱 iPad */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-cards {
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
