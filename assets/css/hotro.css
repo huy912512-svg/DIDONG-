@@ -634,3 +634,15 @@ header {
         grid-template-columns: 1fr; 
     }
 }
+
+.product-card {
+    transition: all 0.4s ease;
+}
+
+.product-card.highlight,
+.product-card.active {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(33, 150, 243, 0.4);
+    border-color: #2196f3;
+    z-index: 2;
+}
