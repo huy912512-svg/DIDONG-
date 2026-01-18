@@ -81,7 +81,7 @@ header {
 }
 
 .search-box input {
-    /* Giữ nguyên các thuộc tính cũ */
+    
     padding: 8px 40px 8px 15px;
     border-radius: 20px;
     border: none;
@@ -97,13 +97,6 @@ header {
     width: 350px; /* Dài ra khi click vào */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(78, 219, 212, 0.5);
-}
-
-/* Responsive cho mobile để không bị vỡ */
-@media (max-width: 768px) {
-    .search-box input:focus {
-        width: 100%;
-    }
 }
 
 .search-box button {
@@ -200,15 +193,6 @@ header {
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* Card iPhone trên banner */
-.card-item {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card-item:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-/* --- XOÁ CÁC CODE .card-item CŨ VÀ DÙNG ĐOẠN NÀY --- */
 
 .card-item {
     background: white;
@@ -221,14 +205,13 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    
     /* Cấu hình hiệu ứng */
     position: relative;
     transition: all 0.4s ease; /* Thời gian chuyển đổi */
     cursor: pointer; /* Hình bàn tay khi chỉ vào */
     
     /* QUAN TRỌNG: Làm mờ những cái KHÔNG active */
-    opacity: 0.5;  /* <--- Mình đã giảm xuống 0.5 cho mờ hẳn */
+    opacity: 0.5;  
     transform: scale(0.9); /* Thu nhỏ lại */
     filter: grayscale(80%); /* Làm xám màu đi (trắng đen) để active sáng rực rỡ hơn */
     z-index: 1;
@@ -1008,100 +991,4 @@ header.sticky {
 /* Khi hover vào tên thì hiện menu */
 #user-logged-in:hover .user-dropdown {
     display: block;
-}
-/* =========================
-   RESPONSIVE MOBILE & IPAD
-   ========================= */
-
-/* 📱 Điện thoại */
-@media (max-width: 768px) {
-
-    /* Header */
-    .top-nav {
-        padding: 0 15px;
-    }
-
-    .search-cart {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .search-box input {
-        width: 100% !important;
-    }
-
-    /* HERO */
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        min-height: auto;
-    }
-
-    .hero-text h1 {
-        font-size: 26px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .hero-cards {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .card-item {
-        width: 90%;
-        max-width: 300px;
-        height: auto;
-        opacity: 1;
-        transform: none;
-        filter: none;
-    }
-
-    .card-item.active {
-        transform: none !important;
-    }
-
-    /* SẢN PHẨM */
-    .product-grid {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-    /* FOOTER */
-    .footer-section {
-        padding: 30px 15px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    .product-links-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* 📱 iPad */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-cards {
-        justify-content: center;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
